@@ -1,0 +1,32 @@
+@import "../../assets/sass/mixins";
+.button {
+  @include blockText(16px, 23px);
+  @include flexCenterToCenter();
+  position: relative;
+  height: 39px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  gap: 10px;
+  opacity: 1;
+  border: 1px solid #323036;
+  border-radius: 12px;
+  background: #fff;
+  color: #323036;
+  white-space: nowrap;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.buttonActive {
+  background: #d9fd51;
+  // transition: all 0.35s ease-in-out;
+}
+
+@media screen and (max-width: 578px) {
+  .button {
+    padding: 2px 8px;
+  }
+}

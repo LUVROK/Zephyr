@@ -1,0 +1,15 @@
+@import "../../assets/sass/mixins";
+.input {
+  @include blockText(16px, 23px);
+  width: 100%;
+  height: 100%;
+  //border-radius: 12px;
+  padding: 16px 12px;
+  color: rgba(50, 48, 54, 0.55);
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(50, 48, 54, 0.55);
+  font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 106, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+  "YTDE" -203, "YTFI" 738, "opsz" 64;
+  letter-spacing: 0.05em;
+}

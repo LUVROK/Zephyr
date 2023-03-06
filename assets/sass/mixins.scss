@@ -1,0 +1,31 @@
+@mixin textH3($fontSize, $lineHeight) {
+  font-family: "Roboto Flex", sans-serif;
+  font-style: normal;
+  font-weight: 580;
+  font-size: $fontSize;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #323036;
+  font-stretch: 151%;
+  font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 530, "XOPQ" 96, "YOPQ" 79, "YTLC" 530, "YTUC" 720, "YTAS" 750,
+    "YTDE" -203, "YTFI" 738, "opsz" 64;
+}
+
+@mixin blockText($fontSize, $lineHeight) {
+  font-family: "Roboto Flex", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $fontSize;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #323036;
+  font-stretch: 151%;
+  font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 527, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+    "YTDE" -203, "YTFI" 738, "opsz" 64;
+}
+
+@mixin flexCenterToCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

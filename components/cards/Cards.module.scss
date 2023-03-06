@@ -1,0 +1,13 @@
+.cards {
+  font-family: "Roboto Flex";
+  padding-top: 148px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .twoCardLine {
+    display: flex;
+    gap: 24px;
+  }
+}

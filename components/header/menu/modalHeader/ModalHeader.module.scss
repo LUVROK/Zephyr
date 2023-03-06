@@ -1,0 +1,70 @@
+@import "../../../../assets/sass/mixins";
+
+.container {
+  z-index: 10;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: 100vw;
+  height: 110vh;
+  background: #ffffff;
+  padding: 44px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+  .header {
+    padding: 40px 16px;
+    border: 1px solid #323036;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .container {
+      display: block;
+    }
+  }
+
+  .call {
+    @include textH3(28px, 40px);
+    color: #323036;
+    font-stretch: 151%;
+    background: #d9fd51;
+    padding: 24px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #323036;
+    border-right: 1px solid #323036;
+    border-bottom: 1px solid #323036;
+    width: 100%;
+  }
+}
+
+.openModal {
+  animation: 0.12s linear animationOpenModal;
+}
+
+.closeModal {
+  animation: 0.12s linear animationCloseModal;
+}
+
+@keyframes animationOpenModal {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes animationCloseModal {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}

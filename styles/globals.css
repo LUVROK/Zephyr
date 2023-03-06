@@ -1,0 +1,132 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap");*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XTRA,YTLC,YTUC@8..144,400,468,514,712;8..144,580,530,530,720&display=swap");
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:GRAD,YOPQ,YTFI,YTLC,YTUC@-57,42,664,479,592&display=swap');*/
+
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Flex", "Ambidexter", sans-serif;
+  overflow: hidden;
+  max-width: 100vw;
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.swiper {
+  position: relative;
+  width: 100%;
+  margin-left: 0px;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+.swiper-slide {
+  width: auto !important;
+}
+.c-scrollbar {
+  width: 30px !important;
+}
+.c-scrollbar_thumb {
+  background-color: transparent !important;
+  width: 12px !important;
+  opacity: 0.75 !important;
+  margin: 40px 9px 0px 9px !important;
+  height: 200px !important;
+  cursor: default !important;
+  padding-bottom: 80px;
+}
+.c-scrollbar_thumb::after {
+  content: "";
+  background-color: #d9fd51 !important;
+  border: 1px solid rgb(0, 0, 0, 0.6);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 99px;
+}
+.c-scrollbar:hover {
+  transform: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+body::-webkit-scrollbar {
+  width: 18px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #d9fd51;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #a2b6f4;
+  border-radius: 20px;
+  border: 6px solid #d9fd51;
+  background-clip: padding-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 580;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-align: left;
+  font-variation-settings: "wdth" 151, "GRAD" 0, "slnt" 0, "XTRA" 530, "XOPQ" 96, "YOPQ" 79, "YTLC" 530, "YTUC" 720,
+    "YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 64;
+}
+
+/* .App {
+  padding-top: 65px;
+} */
+
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}

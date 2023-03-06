@@ -1,0 +1,208 @@
+@import "../assets/sass/mixins";
+
+.Time {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  touch-action: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: auto;
+  padding-bottom: 50vh;
+  .Wrapper {
+    position: relative;
+    height: 90vh;
+    width: 50%;
+    padding-left: 108px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    z-index: 101;
+    h1 {
+      position: relative;
+      @include textH3(72px, 51px);
+
+      font-stretch: 151;
+      font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 120, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+        "YTDE" -203, "YTFI" 738, "opsz" 64;
+      color: #000;
+      font-weight: 700;
+      width: 100%;
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+      span {
+        letter-spacing: 0.15em;
+      }
+    }
+    .Filter {
+      position: relative;
+      margin-top: 48px;
+      h4 {
+        @include textH3(20px, 51px);
+
+        font-stretch: 151;
+        font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 120, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+          "YTDE" -203, "YTFI" 738, "opsz" 64;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .content {
+    position: relative;
+    min-height: 90vh;
+    width: 100%;
+    padding-left: 108px;
+    padding-right: 108px;
+    .job_element {
+      position: relative;
+      border-top-width: 1px;
+      border-bottom-width: 0px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+      border-style: solid;
+      border-color: rgba(50, 48, 54, 0.55);
+      padding: 12px 0px;
+      display: flex;
+      flex-flow: row;
+      cursor: pointer;
+      .job_element__left {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        gap: 24px;
+        width: 40%;
+        h2 {
+          @include textH3(48px, 51px);
+          font-weight: 700;
+          font-stretch: 151;
+          font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 120, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+            "YTDE" -203, "YTFI" 738, "opsz" 64;
+        }
+        h3 {
+          @include textH3(20px, 51px);
+          font-weight: 500;
+          font-stretch: 151;
+          font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 120, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+            "YTDE" -203, "YTFI" 738, "opsz" 64;
+        }
+      }
+      .job_element__right {
+        position: relative;
+        width: 60%;
+        display: flex;
+        flex-flow: column;
+        gap: 24px;
+        .disc {
+          @include textH3(20px, 51px);
+          font-weight: 500;
+          font-stretch: 151;
+          font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 527, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+            "YTDE" -203, "YTFI" 738, "opsz" 64;
+          letter-spacing: 0.02em;
+        }
+      }
+      .teams {
+        position: relative;
+        display: flex;
+        gap: 12px;
+      }
+      &:last-of-type {
+        border-bottom-width: 1px;
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    .Wrapper {
+      width: 80%;
+    }
+    .content {
+      .job_element {
+        flex-flow: column;
+        gap: 24px;
+        .job_element__left {
+          width: 100%;
+        }
+        .job_element__right {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .Wrapper {
+      width: 90%;
+      height: 80vh;
+      min-height: 567px;
+      justify-content: flex-end;
+      padding-left: 12px;
+      padding-bottom: 10%;
+      .Filter {
+        margin-top: 24px;
+        h4 {
+          margin-bottom: 12px;
+        }
+        .buttons {
+          gap: 6px;
+        }
+      }
+      h1 {
+        @include textH3(48px, 51px);
+        letter-spacing: 0em;
+        span {
+          letter-spacing: 0.05em;
+        }
+
+        font-stretch: 151;
+        font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 120, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+          "YTDE" -203, "YTFI" 738, "opsz" 64;
+      }
+    }
+    .content {
+      padding-left: 12px;
+      padding-right: 12px;
+      .job_element {
+        flex-flow: column;
+        gap: 24px;
+        .job_element__left {
+          width: 100%;
+        }
+        .job_element__right {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  .teamsButton {
+    @include blockText(16px, 23px);
+  }
+  button {
+    @include flexCenterToCenter();
+    @include blockText(16px, 23px);
+    color: #323036;
+    //   background: #fff;
+    height: auto;
+    box-sizing: border-box;
+    padding: 2px 8px;
+    gap: 10px;
+    border: 1px solid #323036;
+    border-radius: 12px;
+    cursor: pointer;
+
+    font-stretch: 151;
+    font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 120, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+      "YTDE" -203, "YTFI" 738, "opsz" 64;
+  }
+}

@@ -1,0 +1,370 @@
+@import "../assets/sass/mixins";
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: auto;
+  .Wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding-left: 108px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: row;
+    z-index: 101;
+    .opacitystl {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      transition: opacity 0.25s linear;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .Wrapper__left {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        button {
+          @include flexCenterToCenter();
+          @include blockText(16px, 23px);
+          color: #323036;
+          background: #fff;
+          box-sizing: border-box;
+          padding: 2px 8px;
+          gap: 10px;
+          // opacity: 0.55;
+          border: 1px solid #323036;
+          border-radius: 12px;
+          cursor: pointer;
+          font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 527, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+            "YTDE" -203, "YTFI" 738, "opsz" 64;
+        }
+      }
+      .InnopolisH2 {
+        font-size: 44px;
+        width: 75%;
+      }
+      h2 {
+        position: relative;
+        font-family: "Roboto Flex", sans-serif;
+        margin-top: 50px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        font-stretch: 151;
+        font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 120, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+          "YTDE" -203, "YTFI" 738, "opsz" 64;
+      }
+      p {
+        position: relative;
+        margin-top: 48px;
+        width: 100%;
+        font-family: "Roboto Flex", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 142%;
+        letter-spacing: 0.02em;
+        color: #323036;
+        font-stretch: 151;
+        font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 527, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+          "YTDE" -203, "YTFI" 738, "opsz" 64;
+      }
+      .Owner {
+        position: relative;
+        margin-top: 24px;
+        display: flex;
+        flex-flow: row;
+        img {
+          position: relative;
+          max-height: 40px;
+          border-radius: 40px;
+          margin-right: 8px;
+        }
+        .Ownerdisc {
+          position: relative;
+          height: max-content;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-flow: column;
+        }
+      }
+    }
+    .Wrapper__right {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      align-items: center;
+      img {
+        height: auto;
+        width: max-content;
+      }
+    }
+    @media (max-height: 820px) and (max-width: 1480px) and (min-width: 1080px) {
+      .Wrapper__left {
+        padding-top: 15vh;
+        justify-content: flex-start;
+      }
+      .Wrapper__right {
+        justify-content: flex-end;
+      }
+    }
+    @media (max-height: 720px) and (min-width: 1080px) {
+      .Wrapper__left {
+        justify-content: center;
+        h2 {
+          font-size: 48px;
+          line-height: 120%;
+        }
+      }
+      .Wrapper__right {
+        padding-top: 15vh;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 1080px) {
+      flex-flow: column;
+      .Wrapper__right {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.3;
+        z-index: -1;
+        img {
+          width: 100%;
+        }
+      }
+      .Wrapper__left {
+        position: relative;
+        width: 100%;
+      }
+    }
+    @media (max-width: 720px) {
+      padding-left: 36px;
+      .Wrapper__left {
+        justify-content: flex-end;
+        bottom: 20vh;
+        padding-right: 20px;
+        .InnopolisH2 {
+          font-size: 32px;
+          width: 100%;
+        }
+        h2 {
+          font-size: 44px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    @media (max-width: 490px) {
+      padding-left: 24px;
+    }
+    @media (max-width: 490px) and (max-height: 720px) {
+      .Wrapper__left {
+        justify-content: center;
+        bottom: 0vh;
+      }
+    }
+  }
+  .content {
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 42px 42px 0 0;
+    background-color: #ffffff;
+    z-index: 102;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .contentBlock {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-flow: column;
+      margin-top: 29px;
+
+      h3 {
+        margin-top: 36px;
+        margin-bottom: 36px;
+        @include textH3(44px, 51px);
+        font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 116, "YOPQ" 79, "YTLC" 530, "YTUC" 720, "YTAS" 750,
+          "YTDE" -203, "YTFI" 738, "opsz" 64;
+      }
+
+      h4 {
+        margin-top: 36px;
+        margin-bottom: 36px;
+        @include textH3(24px, 51px);
+        font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 116, "YOPQ" 79, "YTLC" 530, "YTUC" 720, "YTAS" 750,
+          "YTDE" -203, "YTFI" 738, "opsz" 64;
+      }
+
+      ul {
+        @include blockText(20px, 21px);
+        line-height: 140%;
+        font-weight: 400;
+        display: flex;
+        flex-flow: column;
+        list-style-position: inside;
+        margin-top: 12px;
+      }
+
+      .imagesP {
+        margin-top: 36px;
+        margin-bottom: 36px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 36px;
+        img {
+          position: relative;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+
+      p {
+        @include blockText(20px, 21px);
+        line-height: 140%;
+        font-weight: 400;
+        display: flex;
+        flex-flow: column;
+        gap: 12px;
+
+        &:last-of-type {
+          margin-bottom: 65px;
+        }
+
+        ul {
+          list-style-position: inside;
+        }
+
+        span {
+          span {
+            text-decoration: underline;
+            text-underline-position: under;
+            text-decoration-color: rgb(0, 0, 0, 0.7);
+          }
+        }
+      }
+      @media (max-width: 1280px) {
+        width: 65%;
+      }
+      @media (max-width: 720px) {
+        width: 80%;
+        h3 {
+          @include textH3(24px, 51px);
+        }
+
+        h4 {
+          @include textH3(20px, 51px);
+        }
+
+        ul {
+          @include blockText(16px, 21px);
+        }
+
+        p {
+          @include blockText(16px, 21px);
+        }
+      }
+      @media (max-width: 590px) {
+        width: 90%;
+      }
+    }
+    .opacitystl {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      transition: opacity 0.25s linear;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .colorbackground {
+      position: absolute;
+      border-radius: 42px 42px 0 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      z-index: -1;
+    }
+  }
+
+  .WriteUsTx {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 103;
+    margin-top: -60vh;
+    @media (max-width: 720px) {
+      margin-top: -55vh;
+    }
+  }
+  .WriteUsIn {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 103;
+    margin-top: -30vh;
+    @media (max-width: 720px) {
+      margin-top: -27.5vh;
+    }
+  }
+  .WriteUsSb {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 103;
+    margin-top: -60vh;
+    @media (max-width: 720px) {
+      margin-top: -55vh;
+    }
+  }
+  .WriteUsChs {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 103;
+    margin-top: -50vh;
+    @media (max-width: 720px) {
+      margin-top: -40vh;
+    }
+  }
+}

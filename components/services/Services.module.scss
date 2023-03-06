@@ -1,0 +1,125 @@
+@import "../../assets/sass/mixins";
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 520%;
+  background: #f7ff8f;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 48px 108px 200px;
+  gap: 12px;
+  flex: none;
+  z-index: 100;
+  min-height: 100мр;
+
+  .blockTitle {
+    @include textH3(36px, 51px);
+    margin-bottom: 12px;
+  }
+
+  .textHeader {
+    padding-right: 421px;
+    @include blockText(24px, 34px);
+  }
+
+  .cards {
+    padding-top: 12px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    overflow: visible;
+
+    .card {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 16px;
+      gap: 12px;
+      background: #ffffff;
+      border-radius: 36px;
+
+      .containerImage {
+        width: 100%;
+        margin: auto;
+
+        .image {
+          width: 100%;
+        }
+      }
+
+      .cardTitle {
+        @include textH3(24px, 34px);
+      }
+
+      .cardText {
+        @include blockText(16px, 23px);
+      }
+
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        button {
+          @include flexCenterToCenter();
+          @include blockText(16px, 23px);
+          color: #323036;
+          background: #fff;
+          box-sizing: border-box;
+          padding: 2px 8px;
+          gap: 10px;
+          border: 1px solid #323036;
+          border-radius: 12px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1027px) {
+  .container {
+    .textHeader {
+      padding: 0;
+    }
+
+    .cards {
+      @include flexCenterToCenter();
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .container {
+    padding: 24px 16px 90px;
+
+    .blockTitle {
+      @include textH3(24px, 34px);
+    }
+
+    .textHeader {
+      @include blockText(16px, 23px);
+      padding-right: 0;
+    }
+
+    .cards {
+      .card {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+}

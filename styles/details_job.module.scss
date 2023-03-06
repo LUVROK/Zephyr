@@ -1,0 +1,133 @@
+@import "../assets/sass/mixins";
+
+.pageNotFound {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.opacitystl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  transition: opacity 0.25s linear;
+  pointer-events: none;
+  z-index: 200;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background: #f3f4f5;
+  h1 {
+    position: relative;
+    height: fit-content;
+    @include blockText(72px, 23px);
+    font-weight: 700;
+    white-space: nowrap;
+    color: #000;
+    font-stretch: 151;
+    font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 120, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+      "YTDE" -203, "YTFI" 738, "opsz" 64;
+    letter-spacing: 0.05em;
+  }
+  h2 {
+    margin-bottom: 36px;
+    @include textH3(44px, 51px);
+    font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 116, "YOPQ" 79, "YTLC" 530, "YTUC" 720, "YTAS" 750,
+      "YTDE" -203, "YTFI" 738, "opsz" 64;
+    text-transform: capitalize;
+  }
+  h3 {
+    margin-top: 48px;
+    @include textH3(32px, 51px);
+    font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 116, "YOPQ" 79, "YTLC" 530, "YTUC" 720, "YTAS" 750,
+      "YTDE" -203, "YTFI" 738, "opsz" 64;
+    text-transform: capitalize;
+    margin-bottom: 156px;
+  }
+  .wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding-top: 15%;
+    @media (max-width: 1080px) {
+      padding-top: calc(5vw + 15vh);
+    }
+  }
+  @media (max-width: 1080px) {
+    h1 {
+      @include blockText(38px, 23px);
+      font-weight: 700;
+      white-space: initial;
+      text-align: center;
+      color: #000;
+      font-stretch: 151;
+      font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 603, "XOPQ" 120, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+        "YTDE" -203, "YTFI" 738, "opsz" 64;
+      letter-spacing: 0.05em;
+    }
+  }
+  @media (max-width: 720px) {
+    h2 {
+      @include textH3(24px, 51px);
+    }
+    h3 {
+      @include textH3(20px, 51px);
+      margin-bottom: 56px;
+    }
+  }
+  .content {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 42px 42px 0px 0px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 64px 0px;
+    .contentBlock {
+      position: relative;
+      width: 60%;
+      p {
+        margin-bottom: 36px;
+        @include blockText(20px, 21px);
+        line-height: 140%;
+        font-weight: 400;
+        display: flex;
+        flex-flow: column;
+        gap: 12px;
+        letter-spacing: 0.02em;
+
+        strong {
+          font-weight: 900;
+          opacity: 0.9;
+        }
+      }
+      @media (max-width: 1280px) {
+        width: 65%;
+      }
+      @media (max-width: 720px) {
+        width: 80%;
+        p {
+          @include blockText(16px, 21px);
+        }
+      }
+      @media (max-width: 590px) {
+        width: 90%;
+      }
+    }
+  }
+  .WriteUsDetails {
+    position: relative;
+    background-color: transparent;
+  }
+}
